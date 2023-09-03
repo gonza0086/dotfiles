@@ -1,0 +1,1 @@
+/home/gonza0086/.bashrc
