@@ -83,6 +83,7 @@ prompt_git_branch() {
     fi;
 }
 
+# Bash prompt
 PS1='[\[\e[38;5;75m\]\u\';
 PS1+='[\e[0m\]@\h ';
 PS1+="\[\e[0;33m\]\$(prompt_git_branch) ";
