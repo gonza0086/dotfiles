@@ -33,6 +33,3 @@ opt.cursorline = true
 -- commmented line continuation
 vim.cmd("autocmd BufEnter * set formatoptions-=cro")
 vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
-
--- hide tmux statusline 
-vim.cmd("autocmd VimEnter,VimLeave * silent !tmux set status")
