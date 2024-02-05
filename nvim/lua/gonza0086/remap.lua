@@ -52,3 +52,6 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
 keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>")
+
+-- LazyGit
+keymap.set("n", "<leader>gg", ":LazyGit<cr>")

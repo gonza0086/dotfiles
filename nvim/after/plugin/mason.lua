@@ -15,15 +15,6 @@ end
 
 mason.setup()
 
-mason_lspconfig.setup({
-  ensure_installed = {
-    "tsserver",
-    "jsonls",
-    "html",
-    "cssls"
-  },
-})
-
 mason_null_ls.setup({
     ensure_installed = {
         "eslint_d"

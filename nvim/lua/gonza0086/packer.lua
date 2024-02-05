@@ -36,6 +36,15 @@ return packer.startup(function(use)
     use "rebelot/kanagawa.nvim" -- kanagawa
     use('norcalli/nvim-colorizer.lua') -- colorizer
 
+    -- Startup Screen
+    use {
+      "startup-nvim/startup.nvim",
+      requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+      config = function()
+        require"startup".setup({ theme = "dashboard" })
+      end
+    }
+
 	-- plugins dependencies
 	use("nvim-lua/plenary.nvim")
 
@@ -45,6 +54,9 @@ return packer.startup(function(use)
 	use("nvim-tree/nvim-tree.lua") -- file tree [nt]
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- fuzzy finding performance
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finding
+
+    -- Git Integration
+    use({"kdheepak/lazygit.nvim", requires = { "nvim-lua/plenary.nvim" }})
 
 	-- autocompletion
 	use("hrsh7th/nvim-cmp") -- completion plugin
