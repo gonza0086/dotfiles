@@ -121,7 +121,6 @@ return packer.startup(function(use)
             })
     	end
     })
-    use("vim-pandoc/vim-pandoc-syntax")
 
 	-- style
 	use("kyazdani42/nvim-web-devicons") -- icons
