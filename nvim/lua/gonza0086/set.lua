@@ -30,6 +30,9 @@ opt.splitbelow = true
 -- cursor line
 opt.cursorline = true
 
+-- conceal level
+opt.conceallevel = 1
+
 -- commmented line continuation
 vim.cmd("autocmd BufEnter * set formatoptions-=cro")
 vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
