@@ -124,6 +124,11 @@ _G.packer_plugins = {
     path = "/home/gonza/.local/share/nvim/site/pack/packer/start/dracula.nvim",
     url = "https://github.com/Mofiqul/dracula.nvim"
   },
+  ["gruvbox.nvim"] = {
+    loaded = true,
+    path = "/home/gonza/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
+    url = "https://github.com/ellisonleao/gruvbox.nvim"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/gonza/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
@@ -217,7 +222,7 @@ _G.packer_plugins = {
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["obsidian.nvim"] = {
-    config = { "\27LJ\2\nÒ\1\0\0\5\0\a\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\5\0004\3\3\0005\4\3\0>\4\1\0035\4\4\0>\4\2\3=\3\6\2B\0\2\1K\0\1\0\15workspaces\1\0\0\1\0\2\tpath'~/workspace/second-brain/resources\tname\14resources\1\0\2\tpath&~/workspace/second-brain/proyects\tname\rproyects\nsetup\robsidian\frequire\0" },
+    config = { "\27LJ\2\nÒ\1\0\0\5\0\a\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\5\0004\3\3\0005\4\3\0>\4\1\0035\4\4\0>\4\2\3=\3\6\2B\0\2\1K\0\1\0\15workspaces\1\0\0\1\0\2\tname\14resources\tpath'~/workspace/second-brain/resources\1\0\2\tname\rproyects\tpath&~/workspace/second-brain/proyects\nsetup\robsidian\frequire\0" },
     loaded = true,
     path = "/home/gonza/.local/share/nvim/site/pack/packer/start/obsidian.nvim",
     url = "https://github.com/epwalsh/obsidian.nvim"
@@ -272,7 +277,7 @@ try_loadstring("\27LJ\2\nL\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B
 time([[Config for startup.nvim]], false)
 -- Config for: obsidian.nvim
 time([[Config for obsidian.nvim]], true)
-try_loadstring("\27LJ\2\nÒ\1\0\0\5\0\a\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\5\0004\3\3\0005\4\3\0>\4\1\0035\4\4\0>\4\2\3=\3\6\2B\0\2\1K\0\1\0\15workspaces\1\0\0\1\0\2\tpath'~/workspace/second-brain/resources\tname\14resources\1\0\2\tpath&~/workspace/second-brain/proyects\tname\rproyects\nsetup\robsidian\frequire\0", "config", "obsidian.nvim")
+try_loadstring("\27LJ\2\nÒ\1\0\0\5\0\a\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\5\0004\3\3\0005\4\3\0>\4\1\0035\4\4\0>\4\2\3=\3\6\2B\0\2\1K\0\1\0\15workspaces\1\0\0\1\0\2\tname\14resources\tpath'~/workspace/second-brain/resources\1\0\2\tname\rproyects\tpath&~/workspace/second-brain/proyects\nsetup\robsidian\frequire\0", "config", "obsidian.nvim")
 time([[Config for obsidian.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)

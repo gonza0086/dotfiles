@@ -35,6 +35,7 @@ return packer.startup(function(use)
     use ("EdenEast/nightfox.nvim") -- nightfox
     use "rebelot/kanagawa.nvim" -- kanagawa
     use('norcalli/nvim-colorizer.lua') -- colorizer
+    use("ellisonleao/gruvbox.nvim") -- gruvbox
 
     -- Startup Screen
     use {
