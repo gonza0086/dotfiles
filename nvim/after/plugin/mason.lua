@@ -14,10 +14,3 @@ if not mason_null_ls_status then
 end
 
 mason.setup()
-
-mason_null_ls.setup({
-    ensure_installed = {
-        "eslint_d"
-    },
-    automatic_installation = true
-})

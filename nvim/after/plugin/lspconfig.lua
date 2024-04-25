@@ -41,8 +41,14 @@ lspconfig['tsserver'].setup({
     on_attach = on_attach,
 })
 
+-- rust
 lspconfig['rust_analyzer'].setup({
     capabilities = capabilities,
     on_attach = on_attach,
 })
 
+-- python
+lspconfig['pyright'].setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+})

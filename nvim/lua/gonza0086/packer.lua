@@ -99,29 +99,6 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs")
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" })
 
-    -- writing
-    use({
-        "epwalsh/obsidian.nvim",
-        tag = "*",
-        requires = {
-            "nvim-lua/plenary.nvim",
-        },
-        config = function()
-            require("obsidian").setup({
-                workspaces = {
-                    {
-                        name = "proyects",
-                        path = "~/workspace/second-brain/proyects",
-                    },
-                    {
-                        name = "resources",
-                        path = "~/workspace/second-brain/resources",
-                    },
-                },
-            })
-    	end
-    })
-
 	-- style
 	use("kyazdani42/nvim-web-devicons") -- icons
 	use("nvim-lualine/lualine.nvim") -- statusline
