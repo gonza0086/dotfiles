@@ -1,1 +1,2 @@
-require("gonza0086")
+require("gonza.core")
+require("gonza.lazy")
