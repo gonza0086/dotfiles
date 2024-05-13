@@ -16,6 +16,7 @@ opt.wrap = false
 -- appearance
 opt.termguicolors = true
 opt.background = "dark"
+opt.laststatus = 3
 
 -- backspace
 opt.backspace = "indent,eol,start"

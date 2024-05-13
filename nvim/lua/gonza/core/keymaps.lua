@@ -40,6 +40,7 @@ keymap.set("n", "<C-h>", ":wincmd h<CR>")
 keymap.set("n", "<C-l>", ":wincmd l<CR>")
 keymap.set("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Go to prev buffer" })
 keymap.set("n", "<S-l>", "<cmd>BufferLineCycleNext<CR>", { desc = "Go to next buffer" })
+keymap.set("n", "<leader>bd", ":bd<CR>", { desc = "Go to next buffer" })
 
 -- Clearing highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
