@@ -1,6 +1,17 @@
+-- Keymaps are automatically loaded on the VeryLazy event
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here
+
 local keymap = vim.keymap
 
 vim.g.mapleader = " "
+
+-- Remnving lazy keymaps
+vim.keymap.del("n", "<leader>ww")
+vim.keymap.del("n", "<leader>wd")
+vim.keymap.del("n", "<leader>w-")
+vim.keymap.del("n", "<leader>w|")
+vim.keymap.del("n", "s")
 
 -- go normal mode keymaps
 keymap.set("i", "kj", "<ESC>")
@@ -44,8 +55,6 @@ keymap.set("n", "<leader>bd", ":bd<CR>", { desc = "Go to next buffer" })
 
 -- Clearing highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
-
--- telescope
 
 -- LazyGit
 keymap.set("n", "<leader>g", ":LazyGit<cr>", { desc = "Open lazy git" })

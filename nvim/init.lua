@@ -1,2 +1,2 @@
-require("gonza.core")
-require("gonza.lazy")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
