@@ -6,7 +6,7 @@ local keymap = vim.keymap
 
 vim.g.mapleader = " "
 
--- Remnving lazy keymaps
+-- Removing lazy keymaps
 vim.keymap.del("n", "<leader>ww")
 vim.keymap.del("n", "<leader>wd")
 vim.keymap.del("n", "<leader>w-")
@@ -51,7 +51,7 @@ keymap.set("n", "<C-h>", ":wincmd h<CR>")
 keymap.set("n", "<C-l>", ":wincmd l<CR>")
 keymap.set("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Go to prev buffer" })
 keymap.set("n", "<S-l>", "<cmd>BufferLineCycleNext<CR>", { desc = "Go to next buffer" })
-keymap.set("n", "<leader>bd", ":bd<CR>", { desc = "Go to next buffer" })
+keymap.set("n", "<leader>bd", ":bd<CR>", { desc = "Close current buffer" })
 
 -- Clearing highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
