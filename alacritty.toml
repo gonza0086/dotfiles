@@ -1,5 +1,5 @@
 [shell]
-program = 'C:\Windows\System32\wsl.exe'
+program = 'C:\Windows\System32\wsl.exe -d Arch'
 args = ["--cd ~"]
 
 [env]

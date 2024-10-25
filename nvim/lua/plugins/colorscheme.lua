@@ -1,10 +1,8 @@
 return {
-  { "rebelot/kanagawa.nvim" },
-
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "kanagawa",
-    },
-  },
+    "EdenEast/nightfox.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function ()
+        vim.cmd([[colorscheme nightfox]])
+    end
 }

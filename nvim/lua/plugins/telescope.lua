@@ -1,10 +1,49 @@
 return {
-  {
     "nvim-telescope/telescope.nvim",
-    opts = function()
-      vim.keymap.del("n", "<leader><space>")
-      vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Telescope find files" })
-      vim.keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Telescope grep" })
+    event = "VeryLazy",
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+        "nvim-telescope/telescope-file-browser.nvim",
+        {
+            "nvim-telescope/telescope-fzf-native.nvim",
+            build = "make"
+        }
+    },
+    config = function()
+        require('telescope').setup({
+            defaults = {
+                mappings = {
+                    i = {
+                        ["<C-k>"] = require("telescope.actions").move_selection_previous,
+                        ["<C-j>"] = require("telescope.actions").move_selection_next,
+                    }
+                }
+            },
+            extensions = {
+                fzf = {
+                    fuzzy = false,
+                    override_generic_sorter = true,
+                    override_file_sorter = true,
+                    case_mode = "smart_case"
+                }
+            },
+        })
+        require('telescope').load_extension('fzf')
     end,
-  },
+    keys = {
+        {
+            "<leader>ff",
+            function()
+                require("telescope.builtin").find_files()
+            end,
+            desc = "Telescope find files"
+        },
+        {
+            "<leader>e",
+            function()
+                require("telescope").extensions.file_browser.file_browser({ path = "%:h:p", select_buffer = true })
+            end,
+            desc = "Telescope file browser"
+        }
+    }
 }
