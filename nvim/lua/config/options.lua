@@ -21,4 +21,4 @@ opt.termguicolors = true
 opt.cursorline = true
 
 -- cmd
-opt.cmdheight = 0
+opt.showmode = false
