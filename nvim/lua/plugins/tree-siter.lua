@@ -8,6 +8,7 @@ return {
             "lua",
             "javascript",
             "typescript",
+            "tsx",
             "rust",
             "sql",
             "html",
@@ -18,6 +19,10 @@ return {
         },
         indent = {
             enable = true
+        },
+        autotag = {
+            enable = true,
+            filetypes = { "html", "tsx" }
         }
     }
 }

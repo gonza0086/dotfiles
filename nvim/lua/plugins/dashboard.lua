@@ -72,7 +72,7 @@ return {
                         key_hl = "Number",
                         key_format = "%s",
                         action = function()
-                            require("telescope").extensions.file_browser.file_browser({ cwd = "~/.config/nvim" })
+                            require("oil").toggle_float("~/.config/nvim")
                         end
                     },
                 },
