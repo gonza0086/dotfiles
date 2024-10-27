@@ -20,5 +20,4 @@ opt.backspace = "indent,eol,start"
 opt.termguicolors = true
 opt.cursorline = true
 
--- cmd
 opt.showmode = false

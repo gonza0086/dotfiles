@@ -36,14 +36,28 @@ return {
             function()
                 require("telescope.builtin").find_files()
             end,
-            desc = "Telescope find files"
+            desc = "Telescope: find files"
         },
         {
-            "<leader>e",
+            "<leader>gb",
             function()
-                require("telescope").extensions.file_browser.file_browser({ path = "%:h:p", select_buffer = true })
+                require("telescope.builtin").git_branches()
             end,
-            desc = "Telescope file browser"
-        }
+            desc = "Git: branches browser"
+        },
+        {
+            "<leader>fb",
+            function()
+                require("telescope.builtin").buffers()
+            end,
+            desc = "Telescope: Find buffers"
+        },
+        {
+            "<leader>fg",
+            function()
+                require("telescope.builtin").grep_string()
+            end,
+            desc = "Telescope: Find grep"
+        },
     }
 }

@@ -41,3 +41,6 @@ keymap.set("n", "<leader>bd", ":bd<CR>", { desc = "Vim: Close current buffer" })
 
 -- Highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Vim: Clear search highlights" })
+
+-- Toggle oil
+-- keymap.set("n", "<leader>e", function() require("oil").toggle_float() end, { desc = "Oil: Browse files" })
