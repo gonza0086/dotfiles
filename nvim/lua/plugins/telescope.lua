@@ -55,9 +55,16 @@ return {
         {
             "<leader>fg",
             function()
-                require("telescope.builtin").grep_string()
+                require("telescope.builtin").live_grep()
             end,
             desc = "Telescope: Find grep"
+        },
+        {
+            "<leader>fd",
+            function()
+                require("telescope.builtin").diagnostics()
+            end,
+            desc = "Telescope: Find diagnostics"
         },
     }
 }

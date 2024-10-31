@@ -20,4 +20,9 @@ opt.backspace = "indent,eol,start"
 opt.termguicolors = true
 opt.cursorline = true
 
+-- Remove mode above lualine
 opt.showmode = false
+
+-- stop comments when enter
+vim.cmd("autocmd BufEnter * set formatoptions-=cro")
+vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")

@@ -6,7 +6,7 @@ return {
     opts = {
         options = {
             globalstatus = true,
-            section_separators = { left = "", right = "s" }
+            section_separators = { left = "", right = "" }
         },
         sections = {
             lualine_a = { "mode" },
@@ -16,7 +16,7 @@ return {
             } },
             lualine_c = { "filename" },
             lualine_x = { "filetype" },
-            lualine_y = {},
+            lualine_y = { "" },
             lualine_z = { "location" },
         }
     },

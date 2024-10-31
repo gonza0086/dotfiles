@@ -24,8 +24,8 @@ return {
                 { buffer = bufnr, desc = "Lsp: Go to implementations" })
 
             vim.keymap.set("n", "gr", telescope.lsp_references, { buffer = bufnr, desc = "Lsp: Go to references" })
-            vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, { buffer = bufnr, desc = "Lsp: Rename element" })
             vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = bufnr, desc = "Lsp: Element's signature" })
+            vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, { buffer = bufnr, desc = "Lsp: Rename element" })
         end
 
         mason_lspconfig.setup_handlers({

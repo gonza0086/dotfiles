@@ -20,9 +20,5 @@ return {
         indent = {
             enable = true
         },
-        autotag = {
-            enable = true,
-            filetypes = { "html", "tsx" }
-        }
     }
 }
