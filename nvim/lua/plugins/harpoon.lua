@@ -20,28 +20,28 @@ return {
             desc = "Harpoon: Toggle menu"
         },
         {
-            "1",
+            "<leader>1",
             function()
                 require("harpoon.ui").nav_file(1)
             end,
             desc = "Harpoon: Go to file 1"
         },
         {
-            "2",
+            "<leader>2",
             function()
                 require("harpoon.ui").nav_file(2)
             end,
             desc = "Harpoon: Go to file 1"
         },
         {
-            "3",
+            "<leader>3",
             function()
                 require("harpoon.ui").nav_file(3)
             end,
             desc = "Harpoon: Go to file 1"
         },
         {
-            "4",
+            "<leader>4",
             function()
                 require("harpoon.ui").nav_file(4)
             end,
