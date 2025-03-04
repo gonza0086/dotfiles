@@ -76,4 +76,9 @@ PS1='[\[\e[38;5;68m\]\u\';
 PS1+='[\e[0m\]@';
 PS1+='\[\e[0;33m\]\W\[\e[0m\]\] '
 PS1+="\[\e[38;5;131m\]\$(prompt_git_branch)\[\e[0m\]\]]\\$ ";
+
+# Folder color
+LS_COLORS=$LS_COLORS:'di=0;33:';
+export LS_COLORS
+
 . "$HOME/.cargo/env"
