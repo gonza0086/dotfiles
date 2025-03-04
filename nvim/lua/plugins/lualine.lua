@@ -20,7 +20,4 @@ return {
             lualine_z = { "location" },
         }
     },
-    init = function()
-        vim.cmd("autocmd VimEnter,VimLeave * silent !tmux set status")
-    end
 }
