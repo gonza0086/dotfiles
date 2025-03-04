@@ -1,30 +1,18 @@
-# .bashrc
+#
+# ~/.bashrc
+#
 
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
 
-# User specific environment
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
-then
-    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
-fi
-export PATH
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias ll='ls -ltr'
+alias la='la -a'
 
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
-
-# User specific aliases and functions
-if [ -d ~/.bashrc.d ]; then
-	for rc in ~/.bashrc.d/*; do
-		if [ -f "$rc" ]; then
-			. "$rc"
-		fi
-	done
-fi
-
-unset rc
+# PS1='[\u@\h \W]\$ '
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
 
 prompt_git_status() {
 	local s='';
@@ -84,7 +72,8 @@ prompt_git_branch() {
 }
 
 # Bash prompt
-PS1='[\[\e[38;5;75m\]\u\';
-PS1+='[\e[0m\]@\h ';
-PS1+="\[\e[0;33m\]\$(prompt_git_branch) ";
-PS1+='\[\e[38;5;211m\]\w\[\e[0m\]]\\$ '
+PS1='[\[\e[38;5;68m\]\u\';
+PS1+='[\e[0m\]@';
+PS1+='\[\e[0;33m\]\W\[\e[0m\]\] '
+PS1+="\[\e[38;5;131m\]\$(prompt_git_branch)\[\e[0m\]\]]\\$ ";
+. "$HOME/.cargo/env"
