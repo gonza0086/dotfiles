@@ -6,7 +6,8 @@ return {
     opts = {
         options = {
             globalstatus = true,
-            section_separators = { left = "", right = "" }
+            section_separators = { left = "", right = "" },
+            theme = "gruvbox-material"
         },
         sections = {
             lualine_a = { "mode" },
