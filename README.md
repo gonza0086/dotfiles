@@ -11,6 +11,7 @@
  ln -s ~/dotfiles/tmux.conf .tmux.conf
 
 - Install tpm repo for tmux plugins:
+
 mkdir .tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 C-I in tmux for installation
