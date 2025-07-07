@@ -15,7 +15,7 @@
 
 - Install tpm repo for tmux plugins:
 
-      mkdir .tmux
+        mkdir .tmux
 
         git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
@@ -33,3 +33,7 @@
 - Install ripgrep:
 
          sudo pacman -S ripgrep
+
+- Check health of neovim
+
+        :checkhealth
