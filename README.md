@@ -2,7 +2,7 @@
 ## BASHRC
 - Create symbolic link for bash:
 
-        ln -s ~/dotfiles/.bashrc .bashrc
+        ln -s ~/dotfiles/bashrc .bashrc
 
 ## TMUX
 - Install tmux:
