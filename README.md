@@ -2,7 +2,7 @@
 ## BASHRC
 - Create symbolic link for bash:
 
-        ln -s ~/dotfiles/.bashrc .bashrc
+        ln -s ~/dotfiles/bashrc .bashrc
 
 ## TMUX
 - Install tmux:
@@ -11,7 +11,7 @@
 
 - Create simbolic link for tmux conf:
 
-        ln -s ~/dotfiles/tmux.conf .tmux.conf
+        ln -s ~/dotfiles/tmux/tmux.conf .tmux.conf
 
 - Install tpm repo for tmux plugins:
 

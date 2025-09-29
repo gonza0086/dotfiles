@@ -13,7 +13,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias ll='ls -ltr'
 alias la='la -a'
-alias pgstart='sudo mkdir -p /run/postgresql && sudo chown $(whoami) /run/postgresql && pg_ctl -D ~/.postgres_data  start'
+alias pgstart='sudo mkdir -p /run/postgresql && sudo chown $(whoami) /run/postgresql && pg_ctl -D ~/.postgres_data -l ~/.postgres_data/log/logfile start'
 alias pgstop='pg_ctl -D ~/.postgres_data stop'
 
 # PS1='[\u@\h \W]\$ '
