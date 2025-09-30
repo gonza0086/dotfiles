@@ -10,6 +10,7 @@ sudo dnf install -y ncurses ripgrep tmux neovim
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh # rust
 sudo dnf install -y postgresql-server postgresql-contrib # postgresql
 sudo systemctl enable postgresql
+/usr/bin/postgresql-setup --initdb
 
 # bashrc
 mv ~/.bashrc ~/.bashrc.ori
