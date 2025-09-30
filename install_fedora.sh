@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 
-# # git
+# git
 git config --global user.email "hgonzalo2000@gmail.com"
 git config --global user.name "gonza0086"
 git config --global credential.helper 'cache --timeout=3600'
-#
-# # distro & essentials
+
+# distro & essentials
 sudo dnf update -y --refresh # update fedora
 sudo dnf install -y ncurses ripgrep tmux neovim dnf-plugins-core wget
 mkdir ~/workspace
 # rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+. "$HOME/.cargo/env"
 rustup component add rust-analyzer
 # postgresql
 sudo dnf install -y postgresql-server postgresql-contrib
