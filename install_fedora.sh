@@ -6,10 +6,11 @@ git config --global user.name "gonza0086"
 #
 # # distro & essentials
 sudo dnf update -y --refresh # update fedora
-sudo dnf install -y ncurses ripgrep tmux neovim dnf-plugins-core
-mkdir workspace
+sudo dnf install -y ncurses ripgrep tmux neovim dnf-plugins-core wget
+mkdir ~/workspace
 # rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup component add rust-analyzer
 # postgresql
 sudo dnf install -y postgresql-server postgresql-contrib
 sudo systemctl enable postgresql
@@ -21,6 +22,8 @@ sudo dnf-3 config-manager --add-repo https://download.docker.com/linux/fedora/do
 sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo systemctl enable docker
 sudo systemctl start docker
+# npm for neovim
+sudo npm install -g neovim
 
 # bashrc
 mv ~/.bashrc ~/.bashrc.ori

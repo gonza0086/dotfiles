@@ -23,6 +23,9 @@ opt.cursorline = true
 -- Remove mode above lualine
 opt.showmode = false
 
+-- Clipboard
+opt.clipboard = "unnamedplus"
+
 -- stop comments when enter
 vim.cmd("autocmd BufEnter * set formatoptions-=cro")
 vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")

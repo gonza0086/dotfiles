@@ -1,9 +1,16 @@
 [shell]
-program = 'C:\Windows\System32\wsl.exe -d Arch'
+program = 'C:\Windows\System32\wsl.exe -d FedoraLinux-42'
 args = ["--cd ~"]
 
 [env]
 TERM = "xterm-256color"
+
+[selection]
+save_to_clipboard = true
+
+[[mouse.bindings]]
+mouse = "Right"
+action = "Paste"
 
 [font]
 normal.family = "JetBrainsMonoNL Nerd Font"
@@ -53,3 +60,4 @@ color = "#ffa066"
 [[colors.indexed_colors]]
 index = 17
 color = "#ff5d62"
+
