@@ -7,7 +7,7 @@ return {
         "nvim-telescope/telescope.nvim"
     },
     config = function()
-        local lspconfig = require("lspconfig")
+        local lspconfig = vim.lsp.config
         local mason_lspconfig = require("mason-lspconfig")
         local cmp_nvim_lsp = require("cmp_nvim_lsp")
         local telescope = require("telescope.builtin")
@@ -30,10 +30,11 @@ return {
 
         mason_lspconfig.setup_handlers({
             function(server_name)
-                lspconfig[server_name].setup({
-                    on_attach = on_attach,
-                    capabilities = cmp_nvim_lsp.default_capabilities()
-                })
+                -- lspconfig[server_name].setup({
+                --     on_attach = on_attach,
+                --     capabilities = cmp_nvim_lsp.default_capabilities()
+                -- })
+                vim.lsp.enable(server_name)
             end
         })
     end
