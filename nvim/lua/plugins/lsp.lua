@@ -29,7 +29,7 @@ return {
         end
 
         mason_lspconfig.setup({
-            ensure_installed = { "lua_ls", "tailwindcss" }
+            ensure_installed = { "lua_ls", "ts_ls", "tailwindcss" }
         })
 
 
