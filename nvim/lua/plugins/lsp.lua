@@ -28,14 +28,23 @@ return {
             vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, { buffer = bufnr, desc = "Lsp: Rename element" })
         end
 
-        mason_lspconfig.setup_handlers({
-            function(server_name)
-                -- lspconfig[server_name].setup({
-                --     on_attach = on_attach,
-                --     capabilities = cmp_nvim_lsp.default_capabilities()
-                -- })
-                vim.lsp.enable(server_name)
-            end
+        mason_lspconfig.setup({
+            ensure_installed = { "lua_ls", "tailwindcss" }
         })
+
+
+        -- mason_lspconfig.setup_handlers({
+        --     function(server_name)
+        --         -- lspconfig[server_name].setup({
+        --         --     on_attach = on_attach,
+        --         --     capabilities = cmp_nvim_lsp.default_capabilities()
+        --         -- })
+        --         vim.lsp.enable(server_name)
+        --         -- lspconfig[server_name].setup({
+        --         --     on_attach = on_attach,
+        --         --     capabilities = capabilities,
+        --         -- })
+        --     end
+        -- })
     end
 }
