@@ -1,17 +1,26 @@
 #!/usr/bin/env bash
 
-# git
+# # git
 git config --global user.email "hgonzalo2000@gmail.com"
 git config --global user.name "gonza0086"
-
-# distro & essentials
-sudo dnf update --refresh # update fedora
-sudo dnf install -y ncurses ripgrep tmux neovim
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh # rust
-sudo dnf install -y postgresql-server postgresql-contrib # postgresql
-sudo systemctl enable postgresql
-/usr/bin/postgresql-setup --initdb
+#
+# # distro & essentials
+sudo dnf update -y --refresh # update fedora
+sudo dnf install -y ncurses ripgrep tmux neovim dnf-plugins-core
 mkdir workspace
+# rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# postgresql
+sudo dnf install -y postgresql-server postgresql-contrib
+sudo systemctl enable postgresql
+sudo postgresql-setup --initdb --unit postgresql
+sudo systemctl start postgresql
+sudo -u postgres createuser $USER
+# docker
+sudo dnf-3 config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo systemctl enable docker
+sudo systemctl start docker
 
 # bashrc
 mv ~/.bashrc ~/.bashrc.ori
@@ -25,3 +34,4 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # nvim
 mkdir ~/.config
 ln -s ~/dotfiles/nvim ~/.config/nvim
+
