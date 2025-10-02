@@ -42,5 +42,7 @@ keymap.set("n", "<leader>bd", ":bd<CR>", { desc = "Vim: Close current buffer" })
 -- Highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Vim: Clear search highlights" })
 
--- Toggle oil
--- keymap.set("n", "<leader>e", function() require("oil").toggle_float() end, { desc = "Oil: Browse files" })
+-- Diagnostics
+keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Dagnostics: Show current diagnostics" })
+keymap.set("n", "<leader>dk", vim.diagnostic.goto_prev, { desc = "Diagnostics: Show prev error" })
+keymap.set("n", "<leader>dj", vim.diagnostic.goto_next, { desc = "Diagnostics: Show next error" })
