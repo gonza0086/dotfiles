@@ -19,11 +19,11 @@ sudo systemctl enable postgresql
 sudo postgresql-setup --initdb --unit postgresql
 sudo systemctl start postgresql
 sudo -u postgres createuser $USER
-# docker
-sudo dnf-3 config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
-sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-sudo systemctl enable docker
-sudo systemctl start docker
+# # docker
+# sudo dnf-3 config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+# sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+# sudo systemctl enable docker
+# sudo systemctl start docker
 # npm for neovim
 sudo npm install -g neovim
 
