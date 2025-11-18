@@ -3,7 +3,7 @@
 # git
 git config --global user.email "hgonzalo2000@gmail.com"
 git config --global user.name "gonza0086"
-git config --global credential.helper 'cache --timeout=3600'
+git config --global credential.helper 'cache --timeout=18000'
 
 # distro & essentials
 sudo dnf update -y --refresh # update fedora
