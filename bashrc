@@ -96,3 +96,6 @@ LS_COLORS=$LS_COLORS:'di=0;33:';
 export LS_COLORS
 
 . "$HOME/.cargo/env"
+
+# opencode
+export PATH=/home/gonza/.opencode/bin:$PATH
